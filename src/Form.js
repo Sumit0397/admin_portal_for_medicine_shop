@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = ({ addMedicine }) => {
+const Form = (props) => {
   const [medicineData, setMedicineData] = useState({
     medicineName: '',
     medicineDescription: '',
@@ -15,7 +15,7 @@ const Form = ({ addMedicine }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addMedicine(medicineData);
+    props.addMedicine(medicineData);
     setMedicineData({
       medicineName: '',
       medicineDescription: '',
