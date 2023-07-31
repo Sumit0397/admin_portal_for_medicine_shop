@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Form from './Form';
-import MedicineList from './MedicineList';
-import Cart from './Cart';
+import Form from './MedicineData/Form';
+import MedicineList from './MedicineData/MedicineList';
+import Cart from './Cart/Cart';
 import './App.css';
 
 const App = () => {
@@ -13,8 +13,10 @@ const App = () => {
     setMedicines([...medicines, medicine]);
   };
 
-  const addToCart = (medicine) => {
+
+  const addToCart = (medicine,index) => {
     setCartItems([...cartItems, medicine]);
+    setMedicines(medicines.filter((_,i) => i !== index));
   };
 
   const cartHandler = () => {

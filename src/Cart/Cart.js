@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 
 const Cart = (props) => {
   const getTotalAmount = () => {

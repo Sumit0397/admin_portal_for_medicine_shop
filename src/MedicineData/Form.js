@@ -10,7 +10,7 @@ const Form = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setMedicineData({ ...medicineData, [name]: value });
+    setMedicineData({ ...medicineData, [name]: value});
   };
 
   const handleSubmit = (event) => {
